@@ -1,0 +1,13 @@
+{
+  "clientID": "9d447230-2372-441b-b635-196d7384a4b9",
+  "clientSecret": "b879d55b-f54a-4f78-bae2-e546735a24c2",
+  "sslCertPath": "\\Content\\certs\\2024\\HW3-SQLINTEG02_auth.pfx",
+  "sslKeyPath": "\\Content\\certs\\2024\\HW3-SQLINTEG02_auth.key",
+  "sslKeyPass": "HW3-SQLINTEG02",
+  "tokenServerURL": "https://api.adp.com/auth/oauth/v2/token",
+  "disconnectURL": "https://accounts.adp.com/auth/oauth/v2/logout",
+  "apiRequestURL": "https://api.adp.com",
+  "responseType": "code",
+  "defaultexpiration": 3600,
+  "grantType": "client_credentials"
+}

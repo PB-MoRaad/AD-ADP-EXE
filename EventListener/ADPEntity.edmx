@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ADPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_ADP_Event_Messages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="eventID" Type="nvarchar(max)" />
+          <Property Name="applicationID" Type="nvarchar" MaxLength="50" />
+          <Property Name="eventNameCode" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="eventStatusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="creationDateTime" Type="datetime" Nullable="false" />
+          <Property Name="recordDateTime" Type="datetime" Nullable="false" />
+          <Property Name="effectiveDateTime" Type="datetime" />
+          <Property Name="originator" Type="nvarchar" MaxLength="50" />
+          <Property Name="actor" Type="nvarchar" MaxLength="50" />
+          <Property Name="serviceCategoryCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="data" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EntryDate" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+          <Property Name="StatusDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="ADPModelStoreContainer">
+          <EntitySet Name="tb_ADP_Event_Messages" EntityType="Self.tb_ADP_Event_Messages" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ADPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ADPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_ADP_Event_Messages" EntityType="ADPModel.tb_ADP_Event_Messages" />
+        </EntityContainer>
+        <EntityType Name="tb_ADP_Event_Messages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="eventID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="applicationID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="eventNameCode" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="eventStatusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="creationDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="recordDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="effectiveDateTime" Type="DateTime" Precision="3" />
+          <Property Name="originator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="actor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="serviceCategoryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="data" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StatusDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ADPModelStoreContainer" CdmEntityContainer="ADPEntities">
+          <EntitySetMapping Name="tb_ADP_Event_Messages">
+            <EntityTypeMapping TypeName="ADPModel.tb_ADP_Event_Messages">
+              <MappingFragment StoreEntitySet="tb_ADP_Event_Messages">
+                <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="serviceCategoryCode" ColumnName="serviceCategoryCode" />
+                <ScalarProperty Name="actor" ColumnName="actor" />
+                <ScalarProperty Name="originator" ColumnName="originator" />
+                <ScalarProperty Name="effectiveDateTime" ColumnName="effectiveDateTime" />
+                <ScalarProperty Name="recordDateTime" ColumnName="recordDateTime" />
+                <ScalarProperty Name="creationDateTime" ColumnName="creationDateTime" />
+                <ScalarProperty Name="eventStatusCode" ColumnName="eventStatusCode" />
+                <ScalarProperty Name="eventNameCode" ColumnName="eventNameCode" />
+                <ScalarProperty Name="applicationID" ColumnName="applicationID" />
+                <ScalarProperty Name="eventID" ColumnName="eventID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

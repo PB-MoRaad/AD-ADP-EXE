@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>-emailto=%27mohamad.raad%40prosperitybankusa.com%27 -emailfrom=%27Data.Analysts%40prosperitybankusa.com%27 -emailcc=%27madhuri.gandru%40prosperitybankusa.com%27 -subject="%27New Hire Alert for : Jazmin.Hernandez%27" -body="%27&lt;div&gt;Hello Carrie Davies,&amp;nbsp%3b&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;We see that you have offered the role of TEST to Jazmin.Hernandez effective 2023-01-18.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Please open a ticket via the portal for the IT Service Desk%27" -isbodyhtml=%27true%27</StartArguments>
+  </PropertyGroup>
+</Project>
