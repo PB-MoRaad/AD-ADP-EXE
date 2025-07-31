@@ -19,6 +19,7 @@ namespace CreateADUser
             parser.Parameter("password", ParameterParser.AllowType.Required, "New user default password");
             parser.Parameter("UPNFlag", ParameterParser.AllowType.Required, "UPN Flag");
             string samAccountName = string.Empty;
+            string homeDirectory = string.Empty;
 
             try
             {
@@ -32,6 +33,7 @@ namespace CreateADUser
                 }
 
                 samAccountName = ADAttributes["saMAccountName"];
+                homeDirectory = ADAttributes["homeDirectory"];
                 string connection = "LDAP://" + parser["ldap"];
                 //DeleteProfile(ADAttributes["saMAccountName"], connection);
 
@@ -91,6 +93,10 @@ namespace CreateADUser
                 }
 
                 newUser.Close();
+
+                // Create User AD Profile Location
+                AD.CreateProfileLocation(homeDirectory, samAccountName);
+
                 return 0;
             }
             catch (JsonReaderException)
