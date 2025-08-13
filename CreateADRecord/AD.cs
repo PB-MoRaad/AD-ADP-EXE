@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.DirectoryServices;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Management.Automation;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.IO;
 
 namespace CreateADUser
 {
@@ -44,7 +45,7 @@ namespace CreateADUser
         {
             DirectorySearcher dSearcher = new DirectorySearcher(tEntry)
             {
-                Filter = "(&(objectClass=user)(sAMAccountName=" + username + "))" 
+                Filter = "(&(objectClass=user)(sAMAccountName=" + username + "))"
             };
 
             SearchResult result = dSearcher.FindOne();
@@ -67,13 +68,33 @@ namespace CreateADUser
 
         public static void AddToGroup(DirectoryEntry userDn, string groupDn)
         {
-            
+
             DirectoryEntry GrpEntry = new DirectoryEntry("LDAP://HW3-DC02.prosperitybank.com/" + groupDn, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG");
 
             GrpEntry.Invoke("Add", new object[] { userDn.Path.ToString() });
             GrpEntry.CommitChanges();
             GrpEntry.Close();
-            
+
+        }
+
+        public static void CreateProfileLocation(string homeDir, string accountName)
+        {
+            string scriptPath = ConfigurationManager.AppSettings["scriptPath"];
+            string scriptContent = File.ReadAllText(scriptPath);
+
+            using (PowerShell ps = PowerShell.Create())
+            {
+                ps.AddScript(scriptContent);
+                ps.AddParameter("userHomeDirectory", homeDir);
+                ps.AddParameter("userSamAccountName", accountName);
+
+                Collection<PSObject> results = ps.Invoke();
+
+                foreach (var result in results)
+                    Console.WriteLine(result.ToString());
+                foreach (var error in ps.Streams.Error)
+                    Console.WriteLine($"Error: ${error.ToString()}");
+            }
         }
     }
 }

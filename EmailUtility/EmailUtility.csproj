@@ -38,7 +38,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ParameterParser">
-      <HintPath>C:\Users\mohamad.raad\source\repos\ParameterParser\ParameterParser\bin\Release\ParameterParser.dll</HintPath>
+      <HintPath>..\packages\ParameterParser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
