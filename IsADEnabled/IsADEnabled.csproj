@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ParameterParser">
-      <HintPath>C:\Users\mohamad.raad\source\repos\ParameterParser\ParameterParser\bin\Release\ParameterParser.dll</HintPath>
+      <HintPath>..\packages\ParameterParser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

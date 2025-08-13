@@ -40,7 +40,7 @@
     </Reference>
     <Reference Include="ParameterParser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\mohamad.raad\source\repos\ParameterParser\ParameterParser\bin\Release\ParameterParser.dll</HintPath>
+      <HintPath>..\packages\ParameterParser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

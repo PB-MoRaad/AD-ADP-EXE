@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using ParametersParser;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.DirectoryServices;
 using System.Linq;
-using Newtonsoft.Json;
-
-using ParametersParser;
 
 namespace CreateADUser
 {
@@ -34,8 +34,8 @@ namespace CreateADUser
 
                 samAccountName = ADAttributes["saMAccountName"];
                 homeDirectory = ADAttributes["homeDirectory"];
+
                 string connection = "LDAP://" + parser["ldap"];
-                //DeleteProfile(ADAttributes["saMAccountName"], connection);
 
                 DirectoryEntry newUser;
                 using (DirectoryEntry dEntry = new DirectoryEntry(connection, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG"))
@@ -67,9 +67,7 @@ namespace CreateADUser
                     newUser.CommitChanges();
                     newUser.Properties["userAccountControl"].Value = 0x2;
 
-                    // Enable Account & Set Password
-                    //int val = (int)newUser.Properties["userAccountControl"].Value;
-                    //newUser.Properties["userAccountControl"].Value = val & ~0x2;               
+                    // Enable Account & Set Password             
                     newUser.Invoke("SetPassword", new object[] { parser["password"] });
 
                     // Force user to change password at next login
@@ -86,9 +84,12 @@ namespace CreateADUser
                         memberships = AD.GetGroups(tEntry, parser["templateprofile"]);
                     }
 
-                    foreach (var membership in memberships)
+                    if (memberships != null)
                     {
-                        AD.AddToGroup(newUser, membership);
+                        foreach (var membership in memberships)
+                        {
+                            AD.AddToGroup(newUser, membership);
+                        }
                     }
                 }
 

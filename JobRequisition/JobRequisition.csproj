@@ -36,7 +36,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="ParameterParser">
-      <HintPath>C:\Users\mohamad.raad\source\repos\ParameterParser\ParameterParser\bin\Release\ParameterParser.dll</HintPath>
+      <HintPath>..\packages\ParameterParser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
