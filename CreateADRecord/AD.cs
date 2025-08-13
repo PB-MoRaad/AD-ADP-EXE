@@ -85,8 +85,8 @@ namespace CreateADUser
             using (PowerShell ps = PowerShell.Create())
             {
                 ps.AddScript(scriptContent);
-                ps.AddParameter("param1", homeDir);
-                ps.AddParameter("param2", accountName);
+                ps.AddParameter("userHomeDirectory", homeDir);
+                ps.AddParameter("userSamAccountName", accountName);
 
                 Collection<PSObject> results = ps.Invoke();
 
