@@ -96,7 +96,7 @@ namespace CreateADUser
                 newUser.Close();
 
                 // Create User AD Profile Location
-                AD.CreateProfileLocation(homeDirectory, samAccountName);
+                AD.CreateProfileLocation(homeDirectory, samAccountName, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG");
 
                 return 0;
             }

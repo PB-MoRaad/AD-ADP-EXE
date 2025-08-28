@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.DirectoryServices;
-using System.Management.Automation;
 using System.Collections.ObjectModel;
 using System.Configuration;
+using System.Diagnostics;
+using System.DirectoryServices;
 using System.IO;
+using System.Management.Automation;
+using System.Security;
 
 namespace CreateADUser
 {
@@ -77,23 +79,69 @@ namespace CreateADUser
 
         }
 
-        public static void CreateProfileLocation(string homeDir, string accountName)
+        public static void CreateProfileLocation(string homeDir, string accountName, string userName, string password)
         {
-            string scriptPath = ConfigurationManager.AppSettings["scriptPath"];
-            string scriptContent = File.ReadAllText(scriptPath);
-
-            using (PowerShell ps = PowerShell.Create())
+            try
             {
-                ps.AddScript(scriptContent);
-                ps.AddParameter("userHomeDirectory", homeDir);
-                ps.AddParameter("userSamAccountName", accountName);
+                // Create a SecureString for the password for security reasons
+                SecureString securePassword = new SecureString();
+                foreach (char c in password)
+                {
+                    securePassword.AppendChar(c);
+                }
 
-                Collection<PSObject> results = ps.Invoke();
+                securePassword.MakeReadOnly();
 
-                foreach (var result in results)
-                    Console.WriteLine(result.ToString());
-                foreach (var error in ps.Streams.Error)
-                    Console.WriteLine($"Error: ${error.ToString()}");
+                string arguments = $"-NoProfile -ExecutionPolicy Bypass -File \"{ConfigurationManager.AppSettings["scriptPath"]}\" " +
+                        $"-userHomeDirectory \"{homeDir}\" " +
+                        $"-userSamAccountName \"{accountName}\"";
+
+                // Configure ProcessStartInfo to run as different user
+                var processInfo = new ProcessStartInfo
+                {
+                    FileName = "powershell.exe",
+                    Arguments = arguments,
+                    Domain = "PROSPERITY",
+                    UserName = userName,
+                    Password = securePassword,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true
+                };
+
+                using (var process = new Process())
+                {
+                    process.StartInfo = processInfo;
+                    process.Start();
+
+                    string output = process.StandardOutput.ReadToEnd();
+                    string error = process.StandardError.ReadToEnd();
+                    process.WaitForExit();
+
+                    if (!string.IsNullOrEmpty(output))
+                    {
+                        Console.WriteLine("PowerShell Output:");
+                        Console.WriteLine(output);
+                    }
+
+                    if (!string.IsNullOrEmpty(error))
+                    {
+                        Console.WriteLine("PowerShell Errors:");
+                        Console.WriteLine(error);
+                    }
+
+                    // Check exit code
+                    if (process.ExitCode != 0)
+                    {
+                        throw new InvalidOperationException($"PowerShell script failed with exit code: {process.ExitCode}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in CreateProfileCreation: {ex.Message}");
+                throw ex;
             }
         }
     }
