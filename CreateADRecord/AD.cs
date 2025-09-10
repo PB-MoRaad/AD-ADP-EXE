@@ -119,28 +119,36 @@ namespace CreateADUser
                     string error = process.StandardError.ReadToEnd();
                     process.WaitForExit();
 
+                    /*
                     if (!string.IsNullOrEmpty(output))
                     {
                         Console.WriteLine("PowerShell Output:");
                         Console.WriteLine(output);
                     }
+                    */
 
+                    if (!string.IsNullOrEmpty(output))
+                        throw new Exception($"ATTENTION: PowerShell Output {output}");
+
+                    /*
                     if (!string.IsNullOrEmpty(error))
                     {
                         Console.WriteLine("PowerShell Errors:");
                         Console.WriteLine(error);
                     }
+                    */
+
+                    if (!string.IsNullOrEmpty(error))
+                        throw new Exception($"ATTENTION: {error}");
 
                     // Check exit code
                     if (process.ExitCode != 0)
-                    {
                         throw new InvalidOperationException($"PowerShell script failed with exit code: {process.ExitCode}");
-                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error in CreateProfileCreation: {ex.Message}");
+                //Console.WriteLine($"Error in CreateProfileCreation: {ex.Message}");
                 throw ex;
             }
         }
