@@ -79,8 +79,9 @@ namespace CreateADUser
 
         }
 
-        public static void CreateProfileLocation(string homeDir, string accountName, string userName, string password)
+        public static void CreateProfileLocation(DirectoryEntry dEntry, string homeDir, string samAccountName, string userName, string password)
         {
+
             try
             {
                 // Create a SecureString for the password for security reasons
@@ -94,7 +95,7 @@ namespace CreateADUser
 
                 string arguments = $"-NoProfile -ExecutionPolicy Bypass -File \"{ConfigurationManager.AppSettings["scriptPath"]}\" " +
                         $"-userHomeDirectory \"{homeDir}\" " +
-                        $"-userSamAccountName \"{accountName}\"";
+                        $"-userSamAccountName \"{samAccountName}\"";
 
                 // Configure ProcessStartInfo to run as different user
                 var processInfo = new ProcessStartInfo
@@ -119,24 +120,8 @@ namespace CreateADUser
                     string error = process.StandardError.ReadToEnd();
                     process.WaitForExit();
 
-                    /*
-                    if (!string.IsNullOrEmpty(output))
-                    {
-                        Console.WriteLine("PowerShell Output:");
-                        Console.WriteLine(output);
-                    }
-                    */
-
                     if (!string.IsNullOrEmpty(output))
                         throw new Exception($"ATTENTION: PowerShell Output {output}");
-
-                    /*
-                    if (!string.IsNullOrEmpty(error))
-                    {
-                        Console.WriteLine("PowerShell Errors:");
-                        Console.WriteLine(error);
-                    }
-                    */
 
                     if (!string.IsNullOrEmpty(error))
                         throw new Exception($"ATTENTION: {error}");
@@ -148,9 +133,44 @@ namespace CreateADUser
             }
             catch (Exception ex)
             {
-                //Console.WriteLine($"Error in CreateProfileCreation: {ex.Message}");
+                RemoveADProfile(dEntry, samAccountName);
+
                 throw ex;
             }
         }
+
+        public static SearchResult GetDirectoryEntry(DirectoryEntry dirEntry, string sAMAccountName)
+        {
+            sAMAccountName = "shelby.ross";
+
+            DirectorySearcher searcher = new DirectorySearcher(dirEntry);
+            searcher.Filter = "(&(objectClass=user)(sAMAccountName=" + sAMAccountName + "))";
+            var result = searcher.FindOne();
+            return result;
+        }
+
+        public static void RemoveADProfile(DirectoryEntry de, string user)
+        {
+            try
+            {
+                DirectoryEntries myEntries = de.Children;
+
+                DirectorySearcher searcher = new DirectorySearcher(de);
+                searcher.Filter = "(&(objectClass=user)(sAMAccountName=" + user + "))";
+                var result = searcher.FindOne();
+
+                var userEntry = result.GetDirectoryEntry();
+
+                myEntries.Remove(userEntry);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ATTENTION: AD User Profile Processor could not be rolledback unfinished AD account", ex);
+            }
+        }
+
+
+       
     }
 }
