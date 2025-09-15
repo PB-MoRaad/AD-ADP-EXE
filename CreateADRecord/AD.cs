@@ -84,6 +84,10 @@ namespace CreateADUser
 
             try
             {
+                //TODO::
+                // Remove Test Code
+                //throw new NotImplementedException();
+
                 // Create a SecureString for the password for security reasons
                 SecureString securePassword = new SecureString();
                 foreach (char c in password)
