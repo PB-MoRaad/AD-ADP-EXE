@@ -23,6 +23,11 @@ namespace GetADUser
                 var Properties = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(parser["json"]);
                 string[] requiredProperties = Properties.Select(m => m.Select(x => x.Value).FirstOrDefault()).ToArray();
 
+                // Add New Required Property
+                List<string> propertyList = requiredProperties.ToList();
+                propertyList.Add("HomeFolderExistsYN");
+                requiredProperties = propertyList.ToArray();
+
                 using (DirectoryEntry dEntry = new DirectoryEntry("LDAP://HW3-DC02.prosperitybank.com", "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG"))
                 {
                     DirectorySearcher dSearcher = new DirectorySearcher(dEntry);
@@ -41,6 +46,13 @@ namespace GetADUser
                     foreach (var result in results.Properties.PropertyNames)
                     {
                         output.Add((string)result, results.Properties[(string)result][0].ToString());
+
+                        // Validate if Home Directory Exist
+                        if ((string)result == "homedirectory")
+                            if (Directory.Exists(results.Properties[(string)result][0].ToString()))
+                                output.Add("HomeFolderExistsYN", "Y");
+                            else
+                                output.Add("HomeFolderExistsYN", "N");
                     }
 
                     var orderedOutput = requiredProperties
