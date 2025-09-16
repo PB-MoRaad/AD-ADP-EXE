@@ -133,7 +133,7 @@ namespace CreateADUser
             }
             catch (Exception ex)
             {
-                RemoveADProfile(dEntry, samAccountName);
+                RemoveADProfile(dEntry, samAccountName); 
 
                 throw ex;
             }
@@ -153,7 +153,7 @@ namespace CreateADUser
         {
             try
             {
-                DirectoryEntries myEntries = de.Children;
+                DirectoryEntries myEntries = de.Children; 
 
                 DirectorySearcher searcher = new DirectorySearcher(de);
                 searcher.Filter = "(&(objectClass=user)(sAMAccountName=" + user + "))";
