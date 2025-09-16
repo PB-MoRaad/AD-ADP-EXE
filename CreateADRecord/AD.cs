@@ -84,10 +84,6 @@ namespace CreateADUser
 
             try
             {
-                //TODO::
-                // Remove Test Code
-                //throw new NotImplementedException();
-
                 // Create a SecureString for the password for security reasons
                 SecureString securePassword = new SecureString();
                 foreach (char c in password)
@@ -173,8 +169,6 @@ namespace CreateADUser
                 throw new Exception("ATTENTION: AD User Profile Processor could not be rolledback unfinished AD account", ex);
             }
         }
-
-
        
     }
 }

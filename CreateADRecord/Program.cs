@@ -45,10 +45,6 @@ namespace CreateADUser
                 {
                     if (DoesUserExist(dEntry, samAccountName))
                     {
-                        //TODO::
-                        // Remove Test Code
-                        //AD.RemoveADProfile(dEntry, samAccountName);
-
                         Console.Error.WriteLine($"Error: User with samaccount name {samAccountName} already exists");
 
                         return -1;
