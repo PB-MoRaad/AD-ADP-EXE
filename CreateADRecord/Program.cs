@@ -20,6 +20,7 @@ namespace CreateADUser
             parser.Parameter("UPNFlag", ParameterParser.AllowType.Required, "UPN Flag");
             string samAccountName = string.Empty;
             string homeDirectory = string.Empty;
+            string conn = string.Empty;
 
             try
             {
@@ -37,12 +38,15 @@ namespace CreateADUser
 
                 string connection = "LDAP://" + parser["ldap"];
 
+                conn = connection;
+
                 DirectoryEntry newUser;
                 using (DirectoryEntry dEntry = new DirectoryEntry(connection, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG"))
                 {
                     if (DoesUserExist(dEntry, samAccountName))
                     {
                         Console.Error.WriteLine($"Error: User with samaccount name {samAccountName} already exists");
+
                         return -1;
                     }
 
@@ -63,7 +67,7 @@ namespace CreateADUser
 
                         AD.SetProperty(newUser, "userPrincipalName", userPrincipalName);
                     }
-                    
+
                     newUser.CommitChanges();
                     newUser.Properties["userAccountControl"].Value = 0x2;
 
@@ -72,31 +76,32 @@ namespace CreateADUser
 
                     // Force user to change password at next login
                     newUser.Properties["pwdLastSet"].Value = 0;
-                    newUser.CommitChanges();                  
-                }
+                    newUser.CommitChanges();
 
-                // Get Memberships from Profile Template
-                if (!string.IsNullOrEmpty(parser["templateprofile"]))
-                {
-                    var memberships = new List<string>();              
-                    using (DirectoryEntry tEntry = new DirectoryEntry("LDAP://HW3-DC02.prosperitybank.com", "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG"))
-                    {
-                        memberships = AD.GetGroups(tEntry, parser["templateprofile"]);
-                    }
 
-                    if (memberships != null)
+                    // Get Memberships from Profile Template
+                    if (!string.IsNullOrEmpty(parser["templateprofile"]))
                     {
-                        foreach (var membership in memberships)
+                        var memberships = new List<string>();
+                        using (DirectoryEntry tEntry = new DirectoryEntry("LDAP://HW3-DC02.prosperitybank.com", "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG"))
                         {
-                            AD.AddToGroup(newUser, membership);
+                            memberships = AD.GetGroups(tEntry, parser["templateprofile"]);
+                        }
+
+                        if (memberships != null)
+                        {
+                            foreach (var membership in memberships)
+                            {
+                                AD.AddToGroup(newUser, membership);
+                            }
                         }
                     }
+
+                    newUser.Close();
+
+                    // Create User AD Profile Location
+                    AD.CreateProfileLocation(dEntry, homeDirectory, samAccountName, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG");
                 }
-
-                newUser.Close();
-
-                // Create User AD Profile Location
-                AD.CreateProfileLocation(homeDirectory, samAccountName, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG");
 
                 return 0;
             }
