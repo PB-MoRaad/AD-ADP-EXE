@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.DirectoryServices;
+using System.IO;
 using System.Linq;
 
 namespace CreateADUser
@@ -101,6 +102,10 @@ namespace CreateADUser
 
                     // Create User AD Profile Location
                     AD.CreateProfileLocation(dEntry, homeDirectory, samAccountName, "proc-ADWriter", "RzxH@8y9&eNUhw$B*m)M0aDMG");
+
+                    // Validate AD User Home Directory
+                    if (!Directory.Exists(homeDirectory))
+                        AD.RemoveADProfile(dEntry, samAccountName);
                 }
 
                 return 0;
