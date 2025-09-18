@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Projects\\ADP-AD-APIs\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|c:\\projects\\adp-ad-apis\\createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,6 +16,10 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|c:\\projects\\adp-ad-apis\\createadrecord\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
+=======
+      "AbsoluteMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|c:\\projects\\adp-ad-apis\\getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|solutionrelative:getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Dev
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +29,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> Dev
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,6 +53,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "CreateADUser",
               "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\CreateADUser.csproj",
@@ -78,6 +88,17 @@
               "ViewState": "AgIAAFAAAAAA7v/////3v1UAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T18:05:07.859Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\GetADUser\\Program.cs",
+              "RelativeDocumentMoniker": "GetADUser\\Program.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\GetADUser\\Program.cs",
+              "RelativeToolTip": "GetADUser\\Program.cs",
+              "ViewState": "AgIAAAgAAADQYmZmZuYswBcAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T16:25:56.761Z",
+>>>>>>> Dev
               "EditorCaption": ""
             }
           ]
