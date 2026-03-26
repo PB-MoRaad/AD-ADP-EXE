@@ -39,7 +39,7 @@ namespace ADPClient
         /// </summary>
         public static ADPApiConnection InitConnection()
         {
-            string configFileName = "development.json";
+            string configFileName = "production.json";
 
             //StreamReader sr = new StreamReader("..\\..\\Content\\config\\" + configFileName);
             StreamReader sr = new StreamReader("Content\\config\\" + configFileName);
