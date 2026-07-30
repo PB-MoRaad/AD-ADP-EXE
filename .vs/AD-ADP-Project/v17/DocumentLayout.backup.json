@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projects\\ADP-AD-APIs\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|c:\\projects\\adp-ad-apis\\getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|solutionrelative:getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,17 +28,8 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\GetADUser\\Program.cs",
-              "RelativeDocumentMoniker": "GetADUser\\Program.cs",
-              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\GetADUser\\Program.cs",
-              "RelativeToolTip": "GetADUser\\Program.cs",
-              "ViewState": "AgIAAAgAAADQYmZmZuYswBcAAAB4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T16:25:56.761Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
