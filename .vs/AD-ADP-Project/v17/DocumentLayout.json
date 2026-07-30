@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projects\\ADP-AD-APIs\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|c:\\projects\\adp-ad-apis\\eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|solutionrelative:eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|c:\\projects\\adp-ad-apis\\adpclient\\connection\\adpapiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|solutionrelative:adpclient\\connection\\adpapiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|c:\\projects\\adp-ad-apis\\adpclient\\connection\\adpapiconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|solutionrelative:adpclient\\connection\\adpapiconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|c:\\projects\\adp-ad-apis\\eventlistener\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|solutionrelative:eventlistener\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +43,62 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ADPApiConnectionFactory.cs",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "RelativeDocumentMoniker": "ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "RelativeToolTip": "ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAjwDwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T18:56:30.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\EventListener\\App.config",
+              "RelativeDocumentMoniker": "EventListener\\App.config",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\EventListener\\App.config",
+              "RelativeToolTip": "EventListener\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-07-29T14:35:03.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ADPApiConnection.cs",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnection.cs",
+              "RelativeDocumentMoniker": "ADPClient\\Connection\\ADPApiConnection.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnection.cs",
+              "RelativeToolTip": "ADPClient\\Connection\\ADPApiConnection.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAjwM0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T14:31:41.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\EventListener\\Program.cs",
+              "RelativeDocumentMoniker": "EventListener\\Program.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\EventListener\\Program.cs",
+              "RelativeToolTip": "EventListener\\Program.cs",
+              "ViewState": "AgIAAFMAAAAAMzMzMzMgwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T14:27:21.131Z",
+              "EditorCaption": ""
             }
           ]
         }
