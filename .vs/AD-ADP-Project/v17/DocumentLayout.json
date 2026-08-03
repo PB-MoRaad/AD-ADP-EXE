@@ -1,26 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projects\\ADP-AD-APIs\\",
-<<<<<<< HEAD
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|c:\\projects\\adp-ad-apis\\createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|c:\\projects\\adp-ad-apis\\eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|solutionrelative:eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Projects\\ADP-AD-APIs\\createadrecord\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|CreateADUser||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|c:\\projects\\adp-ad-apis\\createadrecord\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
+      "AbsoluteMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|C:\\Projects\\ADP-AD-APIs\\adpclient\\connection\\adpapiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|solutionrelative:adpclient\\connection\\adpapiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-=======
-  "Documents": [],
->>>>>>> Dev
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -28,11 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 5,
-=======
-          "SelectedChildIndex": -1,
->>>>>>> Dev
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,54 +35,36 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-<<<<<<< HEAD
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-=======
-<<<<<<< HEAD
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateADUser",
-              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\CreateADUser.csproj",
-              "RelativeDocumentMoniker": "CreateADRecord\\CreateADUser.csproj",
-              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\CreateADUser.csproj*",
-              "RelativeToolTip": "CreateADRecord\\CreateADUser.csproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-18T18:04:14.694Z",
+              "DocumentIndex": 1,
+              "Title": "ADPApiConnection.cs",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnection.cs",
+              "RelativeDocumentMoniker": "ADPClient\\Connection\\ADPApiConnection.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\ADPClient\\Connection\\ADPApiConnection.cs",
+              "RelativeToolTip": "ADPClient\\Connection\\ADPApiConnection.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAjwK0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T18:54:16.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\Program.cs",
-              "RelativeDocumentMoniker": "CreateADRecord\\Program.cs",
-              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\Program.cs",
-              "RelativeToolTip": "CreateADRecord\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAMDMzMzMRwFIAAAA5AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\EventListener\\Program.cs",
+              "RelativeDocumentMoniker": "EventListener\\Program.cs",
+              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\EventListener\\Program.cs",
+              "RelativeToolTip": "EventListener\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAewCEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:06:34.875Z",
+              "WhenOpened": "2026-07-30T18:54:01.908Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AD.cs",
-              "DocumentMoniker": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\AD.cs",
-              "RelativeDocumentMoniker": "CreateADRecord\\AD.cs",
-              "ToolTip": "C:\\Projects\\ADP-AD-APIs\\CreateADRecord\\AD.cs",
-              "RelativeToolTip": "CreateADRecord\\AD.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAewKMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:05:07.859Z",
-              "EditorCaption": ""
-=======
->>>>>>> Dev
->>>>>>> b9171a3bc0f191486c853aa93c294ab88c01e4d0
             }
           ]
         }

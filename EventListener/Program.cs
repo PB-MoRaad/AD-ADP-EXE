@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ADPClient;
+﻿using ADPClient;
 using ChoETL;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using System.Threading.Tasks;
 
 
 namespace EventListener
@@ -88,20 +89,27 @@ namespace EventListener
                             EntryDate = DateTime.Now
                         };
 
-                        context.tb_ADP_Event_Messages.Add(_event);
-                        context.SaveChanges();
+                        var messages = context.tb_ADP_Event_Messages.ToList();
 
+                        if (!((_event.eventNameCode == "job-application-status-change") &&
+                               messages.Any(x => x.eventNameCode == _event.eventNameCode && x.data == _event.data)))
+                        {
+                            context.tb_ADP_Event_Messages.Add(_event);
+                            context.SaveChanges();
+                        }
 
                         var deleteResponse = await connection.delADPdataAsync("/core/v1/event-notification-messages" + "/" + ADPMsgID);
-                        if ((int)deleteResponse.StatusCode != 200) throw new Exception("Deleting notification message failed");
+                        //if ((int)deleteResponse.StatusCode != 200)
+                        //    throw new Exception("Deleting notification message failed");
 
                     } while (responseCode != 204);
 
                     return 0;
                 }
-                else throw new Exception("Connection to ADP API failed");
+                else
+                    throw new Exception("Connection to ADP API failed");
             }
-         
+
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex.ToString());

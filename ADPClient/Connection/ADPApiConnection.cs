@@ -15,17 +15,19 @@
 # express or implied.  See the License for the specific language
 # governing permissions and limitations under the License.
 */
+using ADPClient.ADPException;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Web;
-using System.Net.Http;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Web.Script.Serialization;
-using ADPClient.ADPException;
 using System.Threading.Tasks;
+using System.Web;
+using System.Web.Script.Serialization;
 
 namespace ADPClient
 {
@@ -176,7 +178,8 @@ namespace ADPClient
 
             if (isConnectedIndicator() && (token != null))
             {
-                return await SendWebRequestAsync(connectionConfiguration.apiRequestURL + ADPProductURL, data, new AuthenticationHeaderValue(token.TokenType, token.AccessToken), "application/json", "GET");
+                var response = await SendWebRequestAsync(connectionConfiguration.apiRequestURL + ADPProductURL, data, new AuthenticationHeaderValue(token.TokenType, token.AccessToken), "application/json", "GET");
+                return response;
             }
             else
             {
@@ -195,11 +198,12 @@ namespace ADPClient
         /// <returns></returns>
         public virtual async Task<HttpResponseMessage> delADPdataAsync(string ADPProductURL, string body = null)
         {
-            ADPAccessToken token = await getAccessTokenAsync(); 
+            ADPAccessToken token = await getAccessTokenAsync();
 
             if (isConnectedIndicator() && (token != null))
             {
-                return await SendWebRequestAsync(connectionConfiguration.apiRequestURL + ADPProductURL, null, new AuthenticationHeaderValue(token.TokenType, token.AccessToken), "application/json", "DELETE", body);            
+                var response = await SendWebRequestAsync(connectionConfiguration.apiRequestURL + ADPProductURL, null, new AuthenticationHeaderValue(token.TokenType, token.AccessToken), "application/json", "DELETE", body);
+                return response;
             }
             else
             {
@@ -216,7 +220,7 @@ namespace ADPClient
         /// <returns></returns>
         public virtual async Task<HttpResponseMessage> postADPEventAsync(string ADPProductURL, string body)
         {
-            ADPAccessToken token = await getAccessTokenAsync(); 
+            ADPAccessToken token = await getAccessTokenAsync();
 
             if (isConnectedIndicator() && (token != null))
             {
@@ -320,10 +324,15 @@ namespace ADPClient
         /// <returns></returns>
         protected async Task<HttpResponseMessage> SendWebRequestAsync(string url, Dictionary<string, string> data, AuthenticationHeaderValue authentication = null, string contentType = "application/x-www-form-urlencoded", string method = "POST", string jsonBody = "")
         {
+            //Test Implementation
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             string certpath = (HttpContext.Current == null) ? connectionConfiguration.sslCertPath : HttpContext.Current.Server.MapPath(connectionConfiguration.sslCertPath);
 
-            WebRequestHandler handler = new WebRequestHandler();
+            
             X509Certificate2 certificate = LoadCertificateFile(certpath, connectionConfiguration.sslKeyPath, connectionConfiguration.sslKeyPass);
+
+            WebRequestHandler handler = new WebRequestHandler();
             handler.ClientCertificates.Add(certificate);
 
             using (var client = new HttpClient(handler))
@@ -350,6 +359,7 @@ namespace ADPClient
                         else if (data != null)
                         {
                             var content = new FormUrlEncodedContent(data);
+
                             response = await client.PostAsync(url, content);
                         }
                     }
