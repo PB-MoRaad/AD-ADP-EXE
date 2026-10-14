@@ -1,0 +1,277 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AB537FD-8617-43DE-A42B-814FF243BF6D}|JobRequisition\\JobRequisition.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\jobrequisition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AB537FD-8617-43DE-A42B-814FF243BF6D}|JobRequisition\\JobRequisition.csproj|solutionrelative:jobrequisition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AB537FD-8617-43DE-A42B-814FF243BF6D}|JobRequisition\\JobRequisition.csproj|c:\\users\\mohamad.raad\\source\\repos\\adp-ad-apis-latest\\jobrequisition\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1AB537FD-8617-43DE-A42B-814FF243BF6D}|JobRequisition\\JobRequisition.csproj|solutionrelative:jobrequisition\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|CreateADUser||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|c:\\users\\mohamad.raad\\source\\repos\\adp-ad-apis-latest\\adpclient\\connection\\adpapiconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AD62D7-6317-460E-802C-3CFE11D9C4DE}|ADPClient\\ADPClient.csproj|solutionrelative:adpclient\\connection\\adpapiconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|JobRequisition||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|c:\\users\\mohamad.raad\\source\\repos\\adp-ad-apis-latest\\getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|solutionrelative:getaduser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D977B62-7804-4576-8221-72890F68E883}|EventListener\\EventListener.csproj|solutionrelative:eventlistener\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\createadrecord\\homedirectoryprovisioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\homedirectoryprovisioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\getaduser\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DFB711B2-6B89-4517-A99E-97B71774F7DF}|GetADUser\\GetADUser.csproj|solutionrelative:getaduser\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\createadrecord\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\createadrecord\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\createadrecord\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|solutionrelative:createadrecord\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AB537FD-8617-43DE-A42B-814FF243BF6D}|JobRequisition\\JobRequisition.csproj|c:\\users\\mohamad.raad\\source\\repos\\adp-ad-apis-latest\\jobrequisition\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B9C18E-B932-435D-AA6D-CFAB511CED5A}|CreateADRecord\\CreateADUser.csproj|c:\\users\\mohamad.raad\\source\\repos\\adp-ad-apis-latest\\createadrecord\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\App.config",
+              "RelativeDocumentMoniker": "JobRequisition\\App.config",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\App.config",
+              "RelativeToolTip": "JobRequisition\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-14T14:18:36.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ADPApiConnectionFactory.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "RelativeDocumentMoniker": "ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "RelativeToolTip": "ADPClient\\Connection\\ADPApiConnectionFactory.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T13:53:03.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\Program.cs",
+              "RelativeDocumentMoniker": "JobRequisition\\Program.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\Program.cs",
+              "RelativeToolTip": "JobRequisition\\Program.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAawHgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JobRequisition",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\JobRequisition.csproj",
+              "RelativeDocumentMoniker": "JobRequisition\\JobRequisition.csproj",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\JobRequisition\\JobRequisition.csproj",
+              "RelativeToolTip": "JobRequisition\\JobRequisition.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-02T14:03:58.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\EventListener\\Program.cs",
+              "RelativeDocumentMoniker": "EventListener\\Program.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\EventListener\\Program.cs",
+              "RelativeToolTip": "EventListener\\Program.cs",
+              "ViewState": "AgIAAFUAAAAAzczMzAwrwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\GetADUser\\App.config",
+              "RelativeDocumentMoniker": "GetADUser\\App.config",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\GetADUser\\App.config",
+              "RelativeToolTip": "GetADUser\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-02T14:03:58.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeDirectoryProvisioner.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\HomeDirectoryProvisioner.cs",
+              "RelativeDocumentMoniker": "CreateADRecord\\HomeDirectoryProvisioner.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\HomeDirectoryProvisioner.cs",
+              "RelativeToolTip": "CreateADRecord\\HomeDirectoryProvisioner.cs",
+              "ViewState": "AgIAACoAAAAAZGZmZiYowDoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\GetADUser\\Program.cs",
+              "RelativeDocumentMoniker": "GetADUser\\Program.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\GetADUser\\Program.cs",
+              "RelativeToolTip": "GetADUser\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwEQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\Logger.cs",
+              "RelativeDocumentMoniker": "CreateADRecord\\Logger.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\Logger.cs",
+              "RelativeToolTip": "CreateADRecord\\Logger.cs",
+              "ViewState": "AgIAAEEAAAAA/P///z8qwE0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\Program.cs",
+              "RelativeDocumentMoniker": "CreateADRecord\\Program.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\Program.cs",
+              "RelativeToolTip": "CreateADRecord\\Program.cs",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAwwFsBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateADUser",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\CreateADUser.csproj",
+              "RelativeDocumentMoniker": "CreateADRecord\\CreateADUser.csproj",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\CreateADUser.csproj",
+              "RelativeToolTip": "CreateADRecord\\CreateADUser.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-02T14:03:58.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AD.cs",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\AD.cs",
+              "RelativeDocumentMoniker": "CreateADRecord\\AD.cs",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\AD.cs",
+              "RelativeToolTip": "CreateADRecord\\AD.cs",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAUwFsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T14:03:58.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\App.config",
+              "RelativeDocumentMoniker": "CreateADRecord\\App.config",
+              "ToolTip": "C:\\Users\\mohamad.raad\\source\\repos\\ADP-AD-APIs-Latest\\CreateADRecord\\App.config",
+              "RelativeToolTip": "CreateADRecord\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-02T14:03:58.539Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
